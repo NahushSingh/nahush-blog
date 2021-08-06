@@ -124,7 +124,7 @@ def login():
         if user and check_password_hash(pwhash=user.password, password=login_form.password.data):
             login_user(user)
             return redirect(url_for('get_all_posts'))
-        elif user:
+        elif not user:
             flash("This email is not registered. Please provide a valid email.")
             return redirect(url_for('login'))
         else:
