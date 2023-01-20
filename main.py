@@ -79,7 +79,7 @@ class Comment(db.Model):
     text = db.Column(db.String(500))
 
 
-# db.create_all()
+db.create_all()
 
 
 @app.route('/')
